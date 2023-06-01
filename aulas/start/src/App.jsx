@@ -1,11 +1,30 @@
 import { Header } from "./components/Header";
-import "./styles.css";
+import { Post } from "./Post";
+import { Sidebar } from "./components/Sidebar";
+
+import styles from "./App.module.css";
+
+import "./global.css";
 
 function App() {
   return (
     <div>
       <Header />
-      <h1>Hello Ignite!</h1>
+
+      <div className={styles.wrapper}>
+        <Sidebar />
+        <main>
+          <Post
+            author="Michel Hoffmann"
+            content="kwrgkeqg rwehwrjhwr egiouwhe oliuhwg ouih rhgwogih holih rhoh oiwh oiuh o oiuhg ouij ioh  ihoh"
+          />
+
+          <Post
+            author="Lorrana Rodrigues"
+            content="kwrgkeqg rwehwrjhwr egiouwhe oliuhwg ouih rhgwogih holih rhoh oiwh oiuh o oiuhg ouij ioh  ihoh"
+          />
+        </main>
+      </div>
     </div>
   );
 }
